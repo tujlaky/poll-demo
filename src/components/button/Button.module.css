@@ -1,5 +1,5 @@
 .button {
-  @apply bg-purple-600;
+  @apply bg-indigo-500;
   @apply text-white;
   @apply font-bold;
   @apply px-4;
@@ -11,5 +11,30 @@
   @apply text-xl;
   @apply px-8;
   @apply py-4;
-  @apply font-semibold;
+  @apply font-normal;
+}
+
+.pollItem {
+  @apply text-lg;
+  @apply px-8;
+  @apply py-4;
+  @apply font-bold;
+  @apply bg-white;
+  @apply border-indigo-500;
+  @apply text-indigo-500;
+  @apply border-2;
+  @apply text-left;
+  @apply flex;
+  @apply justify-between;
+}
+
+.pollItemActive {
+  @apply text-lg;
+  @apply px-8;
+  @apply py-4;
+  @apply font-bold;
+  @apply bg-indigo-500;
+  @apply border-indigo-500;
+  @apply text-white;
+  @apply border-2;
 }
