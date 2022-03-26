@@ -1,0 +1,7 @@
+.input {
+  @apply border;
+  @apply border-gray-400;
+  @apply rounded-md;
+  @apply p-4;
+  @apply w-full;
+}

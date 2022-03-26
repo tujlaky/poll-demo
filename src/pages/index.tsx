@@ -1,61 +1,37 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSquarePollHorizontal } from '@fortawesome/free-solid-svg-icons'
 
-import Counter from '../features/counter/Counter'
-import styles from '../styles/Home.module.css'
+import buttonStyles from '../components/button/Button.module.css';
+import inputStyles from '../components/input/Input.module.css';
 
 const IndexPage: NextPage = () => {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Redux Toolkit</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <header className={styles.header}>
-        <img src="/logo.svg" className={styles.logo} alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className={styles.link}
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className={styles.link}
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className={styles.link}
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className={styles.link}
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+    <div className="flex items-center justify-center h-full">
+      <div className="container flex flex-col items-center justify-center h-full">
+        <FontAwesomeIcon className='mb-8' size='6x' icon={faSquarePollHorizontal}></FontAwesomeIcon>
+        <h1 className='mb-5'>Create simple shareable polls in seconds. <br/>
+        No sign up required.</h1>
+
+        <div className="max-w-md w-full flex flex-col justify-center items-stretch">
+          <div className="mb-5">
+            <input className={`${inputStyles.input}`} placeholder="Option 1" type="text" />
+          </div>
+
+          <div className="mb-5">
+            <input className={`${inputStyles.input}`} placeholder="Option 2" type="text" />
+          </div>
+
+          <div className="mb-5">
+            <input className={`${inputStyles.input}`} placeholder="Option 3" type="text" />
+          </div>
+
+
+          <button className={`${buttonStyles.button} ${buttonStyles.buttonXl} mt-8`}>Create Poll</button>
+        </div>
+
+      </div>
+
     </div>
   )
 }
