@@ -26,11 +26,10 @@ a {
 
 @layer base {
   h1 {
-    @apply text-3xl;
+    @apply text-4xl;
     @apply font-bold;
     @apply text-center;
     @apply leading-tight;
-    @apply uppercase;
   }
   h2 {
     @apply text-xl;

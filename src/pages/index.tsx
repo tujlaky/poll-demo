@@ -9,7 +9,7 @@ import { useForm } from '../app/hooks';
 
 const IndexPage: NextPage = () => {
   const router = useRouter();
-  
+
   const onSubmit = async ({question, ...options}) => {
     const response = await fetch('https://sc-votes.herokuapp.com/poll', {
       method: 'POST',
@@ -41,12 +41,12 @@ const IndexPage: NextPage = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-full">
-      <div className="container flex flex-col items-center justify-center h-full">
-        <FontAwesomeIcon className='mb-5 text-indigo-500' size='4x' icon={faSquarePollHorizontal}></FontAwesomeIcon>
+    <div className="flex flex-col items-start justify-center h-full">
+      <FontAwesomeIcon className='m-5 absolute top-0 left-0 text-indigo-500' size='3x' icon={faSquarePollHorizontal}></FontAwesomeIcon>
+      <div className="container px-5 lg:px-0 flex flex-col items-center justify-center h-full">
 
         <div className="mb-5 text-center">
-          <h1 className='text-gray-700 mb-2'>Create polls in seconds</h1>
+          <h1 className='text-gray-700 mb-10'>Create polls in seconds</h1>
         </div>
 
         <div className="max-w-md w-full">
@@ -63,7 +63,7 @@ const IndexPage: NextPage = () => {
               <input name="option[1]"  className={`${inputStyles.input}`} placeholder="Option 2" type="text" />
             </div>
 
-            <div className="mb-5">
+            <div className="mb-10">
               <input name="option[2]"  className={`${inputStyles.input}`} placeholder="Option 3" type="text" />
             </div>
 

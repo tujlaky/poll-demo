@@ -3,6 +3,9 @@ import { useRouter } from 'next/router'
 import { useState } from "react";
 import buttonStyles from '../../components/button/Button.module.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSquarePollHorizontal } from '@fortawesome/free-solid-svg-icons'
+
 const PostPage: NextPage<{
   question: {
     id: number,
@@ -57,12 +60,14 @@ const PostPage: NextPage<{
     };
 
   return (
-    <div className="container max-w-md flex flex-col items-stretch justify-center h-full">
+    <div className="container px-5 lg:px-0 max-w-md flex flex-col items-stretch justify-center h-full">
+          <FontAwesomeIcon className='m-5 absolute top-0 left-0 text-indigo-500' size='3x' icon={faSquarePollHorizontal}></FontAwesomeIcon>
+
           <h1 className="mb-10 text-indigo-500 normal-case">{question.title}</h1>
           {answers.map(({ id, title }) => (
             <div key={id} className="flex justify-center items-center  mb-5">
               <button  onClick={onClick(id)} className={`${buttonStyles.button} flex-1 ${active ? 'cursor-default' : 'cursor-pointer'} ${active === id ? buttonStyles.pollItemActive : ''} ${buttonStyles.pollItem}`}>
-                {title} {(typeof percentages[id] !== 'undefined') && <span className="ml-5 text-right ">{percentages[id].toFixed(0)}%</span>}
+                {title} {(typeof percentages[id] !== 'undefined') && <span className="ml-5 text-right">{percentages[id].toFixed(0)}%</span>}
               </button>
             </div>
           ))}

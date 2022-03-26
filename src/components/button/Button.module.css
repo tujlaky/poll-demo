@@ -8,31 +8,27 @@
 }
 
 .buttonXl {
-  @apply text-xl;
+  @apply text-lg;
   @apply px-8;
   @apply py-4;
   @apply font-normal;
 }
 
 .pollItem {
-  @apply text-lg;
-  @apply px-8;
+  @apply text-base;
+  @apply px-4;
   @apply py-4;
-  @apply font-bold;
+  @apply font-normal;
   @apply bg-white;
   @apply border-indigo-500;
   @apply text-indigo-500;
-  @apply border-2;
+  @apply border;
   @apply text-left;
   @apply flex;
   @apply justify-between;
 }
 
 .pollItemActive {
-  @apply text-lg;
-  @apply px-8;
-  @apply py-4;
-  @apply font-bold;
   @apply bg-indigo-500;
   @apply border-indigo-500;
   @apply text-white;
